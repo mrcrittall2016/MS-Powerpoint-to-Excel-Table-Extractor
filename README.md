@@ -7,3 +7,7 @@ The program, "power_to_excel.py" can export data from simple MS Powerpoint prese
 The program, "power_to_excelv4.5.py" performs the same task as "power_to_excelv3.py" except parses the Powerpoint presentation only once as oppose to twice i.e. it is more efficient code. 
 
 The program, "power_to_excelv5.py" makes use of command-line arguments to receive input from the user i.e. which MS Powerpoint file they would like to make use of for transferring data to MS Excel. The program is also modularised into a class. 
+
+The program, "power_to_excelv6.py" contains a class named "Combine" which inherits from the class "Powerpoint_to_Excel". This class overrides the main method so as to save the output Excel file as a different name and to run an additional method called "combine" which combines all data from all table templates into a single Excel sheet. In this version, data is combined by column, but unfortunately this does not take into account gaps and missing cells in tables and hence can lead to data becoming "bunched" in the combined version. 
+
+The program, "power_to_excelv7.py" corrects this issue by combining data by row - zipping up each into a dictionary with its corresponding header template as keys. Matching keys are then searched for in the combined sheet header template (the latter for the combined sheet based on length) and when found the data copied across accordingly. 
